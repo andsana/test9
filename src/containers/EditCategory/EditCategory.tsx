@@ -4,11 +4,11 @@ import {
   selectCategory,
   selectFetchOneCategoryLoading,
   selectUpdateCategoryLoading
-} from '../../store/categoriesSlise';
+} from '../../store/categories/categoriesSlise';
 import {useEffect} from 'react';
-import {fetchOneCategory, updateCategory} from '../../store/categoriesThunks';
+import {fetchOneCategory, updateCategory} from '../../store/categories/categoriesThunks';
 import Spinner from '../../components/Spinner/Spinner';
-import CategoryForm from '../../components/CategoryForm';
+import CategoryForm from '../../components/CategoryForm/CategoryForm';
 import {ApiCategory} from '../../types';
 
 const EditCategory = () => {

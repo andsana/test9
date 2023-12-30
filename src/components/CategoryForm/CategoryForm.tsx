@@ -1,6 +1,6 @@
-import {ApiCategory} from '../types';
+import {ApiCategory} from '../../types';
 import React, {useState} from 'react';
-import ButtonSpinner from './Spinner/ButtonSpinner';
+import ButtonSpinner from '../Spinner/ButtonSpinner';
 
 const initialState = {
   type: '',
@@ -53,7 +53,7 @@ const CategoryForm: React.FC<Props> = ({
           <option value="expense">Expense</option>
         </select>
       </div>
-      <div className="form-group">
+      <div className="form-group mb-3">
         <label htmlFor="name">Category</label>
         <select
           name="name"
@@ -64,8 +64,8 @@ const CategoryForm: React.FC<Props> = ({
           onChange={changeCategory}
         >
           <option value="">Select a category</option>
-          <option value="food">Food</option>
-          <option value="salary">Salary</option>
+          <option value="Food">Food</option>
+          <option value="Salary">Salary</option>
           <option value="Drinks">Drinks</option>
         </select>
       </div>

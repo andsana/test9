@@ -1,7 +1,7 @@
-import {ApiCategory, Category} from "../types";
+import {ApiCategory, Category} from "../../types";
 import {createSlice} from "@reduxjs/toolkit";
 import {createCategory, deleteCategory, fetchCategories, fetchOneCategory, updateCategory} from "./categoriesThunks";
-import {RootState} from "../app/store";
+import {RootState} from "../../app/store";
 
 interface CategoriesState {
     items: Category[];

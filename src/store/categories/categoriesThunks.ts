@@ -1,6 +1,6 @@
-import {ApiCategory, CategoriesList, Category} from '../types';
-import {AppDispatch} from '../app/store';
-import axiosApi from '../axiosApi';
+import {ApiCategory, CategoriesList, Category} from '../../types';
+import {AppDispatch} from '../../app/store';
+import axiosApi from '../../axiosApi';
 import {createAsyncThunk} from '@reduxjs/toolkit';
 
 export const createCategory = createAsyncThunk<void, ApiCategory, { dispatch: AppDispatch }>(

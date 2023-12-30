@@ -2,9 +2,9 @@ import React from 'react';
 import {useNavigate} from 'react-router-dom';
 import {useAppDispatch, useAppSelector} from '../../app/hooks';
 import {ApiCategory} from '../../types';
-import {createCategory} from '../../store/categoriesThunks';
-import CategoryForm from '../../components/CategoryForm';
-import {selectCreateCategoryLoading} from '../../store/categoriesSlise';
+import {createCategory} from '../../store/categories/categoriesThunks';
+import CategoryForm from '../../components/CategoryForm/CategoryForm';
+import {selectCreateCategoryLoading} from '../../store/categories/categoriesSlise';
 
 const NewCategory: React.FC = () => {
   const navigate = useNavigate();

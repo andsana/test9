@@ -1,8 +1,8 @@
 import {Category} from '../../types';
 import {useAppDispatch, useAppSelector} from '../../app/hooks';
-import {selectDeleteCategoryLoading} from '../../store/categoriesSlise';
+import {selectDeleteCategoryLoading} from '../../store/categories/categoriesSlise';
 import {Link} from 'react-router-dom';
-import {deleteCategory} from '../../store/categoriesThunks';
+import {deleteCategory} from '../../store/categories/categoriesThunks';
 import ButtonSpinner from '../../components/Spinner/ButtonSpinner';
 import React from 'react';
 
@@ -15,7 +15,7 @@ const CategoryItem: React.FC<Props> = ({category}) => {
   const deleteCategoryLoading = useAppSelector(selectDeleteCategoryLoading);
 
   return (
-    <div className="card card-body mb-3" style={{maxWidth: '540px'}}>
+    <div className="card card-body mb-3" style={{maxWidth: '700px'}}>
       <div className="row align-items-center">
         <div className="col">
           <span>{category.name}</span>

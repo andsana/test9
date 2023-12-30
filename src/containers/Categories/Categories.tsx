@@ -1,10 +1,10 @@
 import {Link} from 'react-router-dom';
 import {useAppDispatch, useAppSelector} from '../../app/hooks';
-import {selectCategories, selectFetchCategoriesLoading} from '../../store/categoriesSlise';
+import {selectCategories, selectFetchCategoriesLoading} from '../../store/categories/categoriesSlise';
 import Spinner from '../../components/Spinner/Spinner';
 import CategoryItem from './CategoryItem';
 import {useEffect} from 'react';
-import {fetchCategories} from '../../store/categoriesThunks';
+import {fetchCategories} from '../../store/categories/categoriesThunks';
 
 const Categories = () => {
   const dispatch = useAppDispatch();
