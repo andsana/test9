@@ -27,7 +27,7 @@ const TransactionItem: React.FC<Props> = ({transaction, category}) => {
         </div>
         <div className="col text-end">
           <span className="me-3" style={{color: category.type === 'income' ? "green" : "red"}}>
-            {category.type === 'income' ? transaction.amount : -transaction.amount} KGS
+            {transaction.amount} KGS
           </span>
           <Link className="btn btn-primary me-3" to={'/update-category/' + transaction.id}>Edit</Link>
           <button

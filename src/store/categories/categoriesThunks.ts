@@ -65,3 +65,7 @@ export const deleteCategory = createAsyncThunk<void, string, { dispatch: AppDisp
     await thunkAPI.dispatch(fetchCategories());
   }
 );
+
+
+
+

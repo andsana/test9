@@ -41,13 +41,16 @@ const TransactionForm: React.FC<Props> = ({
   const onFormSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
       if (isLoading) return;
-      const { category, amount } = transaction;
+      const { category, amount, type } = transaction;
       const now = new Date();
       const createdAt = now.toISOString();
 
+    const parsedAmount = parseFloat(amount);
+    const adjustedAmount = type === 'income' ? parsedAmount : -parsedAmount;
+
       const data = {
           category,
-          amount: parseFloat(amount),
+          amount: adjustedAmount,
           createdAt,
       };
     onSubmit(data);
@@ -103,6 +106,7 @@ const TransactionForm: React.FC<Props> = ({
             className="form-control"
             value={transaction.amount}
             onChange={changeTransaction}
+            min="0"
           />
           <span className="input-group-text" id="basic-addon2">KGS</span>
         </div>

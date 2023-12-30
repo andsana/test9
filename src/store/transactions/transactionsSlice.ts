@@ -1,16 +1,17 @@
-import {ApiTransaction, Transaction} from "../../types";
-import {createSlice} from "@reduxjs/toolkit";
-import {RootState} from "../../app/store";
+import {ApiTransaction, Transaction} from '../../types';
+import {createSlice} from '@reduxjs/toolkit';
+import {RootState} from '../../app/store';
 import {
-    createTransaction,
-    deleteTransaction,
-    fetchOneTransaction,
-    fetchTransactions,
-    updateTransaction
-} from "./transactionThunks";
+  createTransaction,
+  deleteTransaction,
+  fetchOneTransaction,
+  fetchTransactions,
+  updateTransaction
+} from './transactionThunks';
 
 interface TransactionsState {
   items: Transaction[];
+  orderTotal: number;
   transaction: ApiTransaction | null;
   fetchTransactionsLoading: boolean;
   fetchOneTransactionLoading: boolean;
@@ -21,6 +22,7 @@ interface TransactionsState {
 
 const initialState: TransactionsState = {
   items: [],
+  orderTotal: 0,
   transaction: null,
   fetchTransactionsLoading: false,
   fetchOneTransactionLoading: false,
